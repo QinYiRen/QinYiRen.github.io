@@ -402,6 +402,24 @@
         
       
       
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"aac4c7ee7e1bab363580","clientSecret":"4cd6dda954946cc61727e5d3fcd0cf3cd7b8ab0c","repo":"QinYiRen.github.io","owner":"QinYiRen","admin":["QinYiRen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'a7224db13f3a49096aa27c1876d1a947'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
 
     </article>
   
